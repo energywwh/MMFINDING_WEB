@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>MM.FINDING</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://cdn.dowebok.com/77/css/jquery.fullPage.css">
+		<link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+		<link href="css/mmfinding.min.css" rel="stylesheet" />
+		<!--<link href="css/mmfinding.css" rel="stylesheet" />-->
+		<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+		<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!--<script src="js/bootstrap.min.js"></script>-->
+		<script src="http://cdn.dowebok.com/77/js/jquery.fullPage.min.js"></script>
+		<script>
+			$(function() {
+				$('#dowebok').fullpage({
+					sectionsColor: ['#fff', '#fff', '#fff', '#fff']
+				});
+			});
+		</script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=9DPH14hkjndWXqPuYgkTlqbI"></script>
+		<!--<script src="js/mmfinding.js"></script>-->
+		<script src="js/mmfinding.min.js"></script>
+		<!--<script>
+			$.support.transition = false;
+		</script>-->
+
+		<style>
+			.section {
+				text-align: center;
+				font: 50px "Microsoft Yahei";
+				color: #000;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="dowebok">
+			<div class="section report">
+				<div class="page1-header">
+					<div class="container-fluid">
+						<div class="row">
+							<!--<div class="col-xs-1"></div>-->
+							<div class="col-xs-10 col-xs-offset-1">
+								<img class="img-responsive" style="padding-top: 6%;" src="img/logo.png" />
+							</div>
+							<!--<div class="col-xs-1"></div>-->
+						</div>
+					</div>
+				</div>
+				<div class="page1-container">
+					<div class="container-fluid col-xs-1">
+						<div class="row">
+							<img class="img-responsive" style="padding-top: 5px;" src="img/bg_circle.png" />
+						</div>
+					</div>
+					<div class="mmlab">
+						<p>&nbsp;你属于下列的哪一只？</p>
+					</div>
+
+					<button class="radius btn btn-danger btn-lg" id="sex0">&nbsp;&nbsp;萝莉&nbsp;&nbsp;</button>
+					<button class="radius btn btn-danger btn-lg" id="sex1">&nbsp;&nbsp;&nbsp;OL&nbsp;&nbsp;&nbsp;</button>
+					<button class="radius btn btn-danger btn-lg" id="sex2">&nbsp;&nbsp;御姐&nbsp;&nbsp;</button>
+					<button class="radius btn btn-danger btn-lg" id="sex3">&nbsp;&nbsp;女王&nbsp;&nbsp;</button>
+					<button class="radius btn btn-danger btn-lg" id="sex4">&nbsp;&nbsp;森女&nbsp;&nbsp;</button>
+					<button class="radius btn btn-info btn-lg" id="sex5">&nbsp;&nbsp;暖男&nbsp;&nbsp;</button>
+					<button class="radius btn btn-success btn-lg" id="sex6">&nbsp;&nbsp;酷酷哒&nbsp;&nbsp;</button>
+					<button class="radius btn btn-warning btn-lg" id="sex7">&nbsp;&nbsp;美男子&nbsp;&nbsp;</button>
+				</div>
+
+			</div>
+
+			<div class="section report">
+				<div class="page2-header">
+					<div class="container-fluid col-xs-1">
+						<div class="row">
+							<img class="img-responsive" style="padding-top: 5px;" src="img/bg_circle.png" />
+						</div>
+					</div>
+					<div class="mmlab">
+						<p>&nbsp;基本情况1/2</p>
+					</div>
+				</div>
+				<div class="page2-container">
+					<div class="container-fluid">
+						<!--<div class="row">-->
+						<div class="btn-group col-xs-12" style="margin-top: 10%" ;>
+							<button type="button" class="radius btn dropdown-toggle btn-primary btn-lg btn-block" id="age" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								&nbsp;年龄 <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a id="age0">18岁以下</a>
+								</li>
+								<li><a id="age1">18~22岁</a>
+								</li>
+								<li><a id="age2">22~25岁</a>
+								</li>
+								<li><a id="age3">25~30岁</a>
+								</li>
+								<li><a id="age4">30~45岁</a>
+								</li>
+								<li><a id="age5">45岁以上</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="btn-group col-xs-12" style="margin-top: 10%;">
+							<button type="button" class="radius btn dropdown-toggle btn-success btn-lg btn-block" id="surroundings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								&nbsp;生活环境 <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a id="surroundings0">学校</a>
+								</li>
+								<li><a id="surroundings1">办公室</a>
+								</li>
+								<li><a id="surroundings2">室外</a>
+								</li>
+								<li><a id="surroundings3">熬夜</a>
+								</li>
+								<!--<li><a>30~45岁</a></li>
+    							<li><a>45岁以上</a></li>-->
+							</ul>
+						</div>
+
+						<div class="btn-group col-xs-12" style="margin-top: 10%;">
+							<button type="button" class="radius btn dropdown-toggle btn-warning btn-lg btn-block" id="skintype" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								&nbsp;肤质 <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a id="skintype0">有痘痘</a>
+								</li>
+								<li><a id="skintype1">有干纹</a>
+								</li>
+								<li><a id="skintype2">肤色不均有斑</a>
+								</li>
+								<li><a id="skintype3">脱皮</a>
+								</li>
+								<li><a id="skintype4">有红血丝</a>
+								</li>
+								<li><a id="skintype5">出油</a>
+								</li>
+								<!--<li><a>45岁以上</a></li>-->
+							</ul>
+						</div>
+
+						<div class="btn-group col-xs-12" style="margin-top: 10%;">
+							<button type="button" class="radius btn dropdown-toggle btn-info btn-lg btn-block" id="skincolor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								&nbsp;肤色 <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a id="skincolor0">肤色白</a>
+								</li>
+								<li><a id="skincolor1">肤色黑</a>
+								</li>
+								<li><a id="skincolor2">肤色黄</a>
+								</li>
+								<li><a id="skincolor3">肤色红</a>
+								</li>
+								<!--<li><a>30~45岁</a></li>
+    							<li><a>45岁以上</a></li>-->
+							</ul>
+						</div>
+
+						<!--<button class="btn btn-primary btn-lg col-xs-10 col-xs-offset-1" id="age">年龄</button>-->
+						<!--<button  style="margin-top: 6%;" class="btn btn-success btn-lg col-xs-10 col-xs-offset-1" id="surroundings">生活环境</button>-->
+						<!--<button  style="margin-top: 6%;" class="btn btn-info btn-lg col-xs-10 col-xs-offset-1" id="skincolor">肤色</button>-->
+						<!--<button  style="margin-top: 6%;" class="btn btn-warning btn-lg col-xs-10 col-xs-offset-1" id="skintype">肤质</button>-->
+						<!--</div>-->
+					</div>
+
+					<div class="container-fluid" style="margin-top: 12%; margin-left: 3%; margin-right: 3%;">
+						<div class="row">
+							<div class="col-xs-3">
+								<img id="facetype0" src="img/yuanlian.png" class="img-responsive" />
+								<p class="facetext">圆脸</p>
+							</div>
+							<div class="col-xs-3">
+								<img id="facetype1" src="img/changlian.png" class="img-responsive" />
+								<p class="facetext">鹅蛋脸</p>
+							</div>
+							<div class="col-xs-3">
+								<img id="facetype2" src="img/guazilian.png" class="img-responsive" />
+								<p class="facetext">瓜子脸</p>
+							</div>
+							<div class="col-xs-3">
+								<img id="facetype3" src="img/fanglian.png" class="img-responsive" />
+								<p class="facetext">方脸</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="section report">
+				<div class="page2-header">
+					<div class="container-fluid col-xs-1">
+						<div class="row">
+							<img class="img-responsive" style="padding-top: 5px;" src="img/bg_circle.png" />
+						</div>
+					</div>
+					<div class="mmlab">
+						<p>&nbsp;基本情况2/2</p>
+					</div>
+				</div>
+				<div class="page2-container">
+					<div class="container-fluid">
+						<div class="btn-group col-xs-6" style="margin-top: 5%" ;>
+							<button type="button" class="radius btn dropdown-toggle btn-primary btn-lg btn-block" id="eyebrow" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								眉毛 <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a id="eyebrow0">粗眉毛</a>
+								</li>
+								<li><a id="eyebrow1">眉毛稀疏</a>
+								</li>
+								<li><a id="eyebrow2">交叉眉</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="btn-group col-xs-6" style="margin-top: 5%;">
+							<button type="button" class="radius btn dropdown-toggle btn-primary btn-lg btn-block" id="eyelid" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								眼皮 <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a id="eyelid0">双眼皮</a>
+								</li>
+								<li><a id="eyelid1">内双眼皮</a>
+								</li>
+								<li><a id="eyelid2">单眼皮</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="btn-group col-xs-6" style="margin-top: 5%;">
+							<button type="button" class="radius btn dropdown-toggle btn-warning btn-lg btn-block" id="nose" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								鼻子 <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a id="nose0">塌鼻子</a>
+								</li>
+								<li><a id="nose1">高鼻子</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="btn-group col-xs-6" style="margin-top: 5%;">
+							<button type="button" class="radius btn dropdown-toggle btn-warning btn-lg btn-block" id="lip" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								嘴唇 <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a id="lip0">薄嘴唇</a>
+								</li>
+								<li><a id="lip1">厚嘴唇</a>
+								</li>
+								<!--<li><a id="lip2">上厚下薄</a>
+								</li>
+								<li><a id="lip3">上薄下厚</a>
+								</li>-->
+							</ul>
+						</div>
+
+						<div class="btn-group col-xs-11" style="margin-top: 7%;">
+							<button type="button" class="radius btn dropdown-toggle btn-success btn-lg btn-block" id="haircolor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								头发颜色 <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a id="haircolor0">黑头发</a>
+								</li>
+								<li><a id="haircolor1">棕头发</a>
+								</li>
+								<li><a id="haircolor2">黄头发</a>
+								</li>
+								<li><a id="haircolor3">红头发</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="btn-group col-xs-11 col-xs-offset-1" style="margin-top: 5%;">
+							<button type="button" class="radius btn dropdown-toggle btn-info btn-lg btn-block" id="hairlength" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								头发长度 <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a id="hairlength0">长发</a>
+								</li>
+								<li><a id="hairlength1">中长发</a>
+								</li>
+								<li><a id="hairlength2">短发</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="btn-group col-xs-11" style="margin-top: 5%;">
+							<button type="button" class="radius btn dropdown-toggle btn-warning btn-lg btn-block" id="bang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								刘海 <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+								<li><a id="bang0">有刘海</a>
+								</li>
+								<li><a id="bang1">无刘海</a>
+								</li>
+							</ul>
+						</div>
+
+						<!--<button class="btn btn-lg btn-danger" id="up" style="margin-top: 10%;">&nbsp;&nbsp;查看结果&nbsp;&nbsp;</button>-->
+
+						<!-- Button trigger modal -->
+						<button type="button" style="margin-top: 10%;" class="btn btn-danger btn-lg" id="check">
+							查看结果</button>
+
+					</div>
+				</div>
+
+				<!--<h3>第三屏</h3>-->
+				<!--<button class="btn btn-danger" id="up">上一页</button>-->
+			</div>
+			<!--<div class="section">
+		<h3>第四屏</h3>
+		<p>这是最后一屏</p>
+	</div>-->
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content report">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">检测报告</h4>
+					</div>
+					<div class="modal-body" id="modal-body">
+						你是大美女，你是西施，闭月羞花，美女咱们做朋友吧！你是大美女，你是西施，闭月羞花，美女咱们做朋友吧！ 你是大美女，你是西施，闭月羞花，美女咱们做朋友吧！你是大美女，你是西施，闭月羞花，美女咱们做朋友吧！ 你是大美女，你是西施，闭月羞花，美女咱们做朋友吧！你是大美女，你是西施，闭月羞花，美女咱们做朋友吧！
+					</div>
+					<div class="modal-footer" style="text-align: center;">
+						<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+						<a class="btn btn-primary" href="http://wap.koudaitong.com/v2/showcase/homepage?kdt_id=281075&spm=g5015828">点我爆装备</a>
+						<!--<button type="button" class="btn btn-primary" data-dismiss="modal">点我爆装备</button>-->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--弹幕-->
+		<!--<div class="danmu">-->
+		<div id="tangmu">
+		</div>
+		<!--<input type="text" id="text" value="这是弹幕..."/>-->
+		<!--<input type="button" value="发送" onClick="tangmu('12345shangshandalaohuasasgasfgafgasdgasdgadsgasfgafgasgadgasdgsdfhsfdhaf');"/>-->
+		<!--</div>-->
+
+	</body>
+
+</html>
