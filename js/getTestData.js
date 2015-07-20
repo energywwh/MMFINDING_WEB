@@ -32,63 +32,71 @@ query.count({
 	success: function(count) {
 		if (count > 0) {
 			resultArry[i][k] = count;
-			resultLegendArry[i][k++] = legendArry[i][j++];
+			resultLegendArry[i][k++] = legendArry[i][j];
 		}
+		j++;
 		query.equalTo(fields[i], (j - 1)); //2
 		query.count({
 			success: function(count) {
 				if (count > 0) {
 					resultArry[i][k] = count;
-					resultLegendArry[i][k++] = legendArry[i][j++];
+					resultLegendArry[i][k++] = legendArry[i][j];
 				}
+				j++;
 				query.equalTo(fields[i], (j - 1)); //3
 				query.count({
 					success: function(count) {
 						if (count > 0) {
 							resultArry[i][k] = count;
-							resultLegendArry[i][k++] = legendArry[i][j++];
+							resultLegendArry[i][k++] = legendArry[i][j];
 						}
+						j++;
 						query.equalTo(fields[i], (j - 1)); //4
 						query.count({
 							success: function(count) {
 								if (count > 0) {
 									resultArry[i][k] = count;
-									resultLegendArry[i][k++] = legendArry[i][j++];
+									resultLegendArry[i][k++] = legendArry[i][j];
 								}
+								j++;
 								query.equalTo(fields[i], (j - 1)); //5
 								query.count({
 									success: function(count) {
 										if (count > 0) {
 											resultArry[i][k] = count;
-											resultLegendArry[i][k++] = legendArry[i][j++];
+											resultLegendArry[i][k++] = legendArry[i][j];
 										}
+										j++;
 										query.equalTo(fields[i], (j - 1)); //6
 										query.count({
 											success: function(count) {
 												if (count > 0) {
 													resultArry[i][k] = count;
-													resultLegendArry[i][k++] = legendArry[i][j++];
+													resultLegendArry[i][k++] = legendArry[i][j];
 												}
+												j++;
 												query.equalTo(fields[i], (j - 1)); //7
 												query.count({
 													success: function(count) {
 														if (count > 0) {
 															resultArry[i][k] = count;
-															resultLegendArry[i][k++] = legendArry[i][j++];
+															resultLegendArry[i][k++] = legendArry[i][j];
 														}
+														j++;
 														query.equalTo(fields[i], (j - 1)); //8
 														query.count({
 															success: function(count) {
 																if (count > 0) {
 																	resultArry[i][k] = count;
-																	resultLegendArry[i][k++] = legendArry[i][j++];
+																	resultLegendArry[i][k++] = legendArry[i][j];
 																}
+																j++;
 																query.equalTo(fields[i], (j - 1)); //9
 																query.count({
 																	success: function(count) {
 																		if (count > 0) {
 																			resultArry[i][k] = count;
-																			resultLegendArry[i][k++] = legendArry[i][j++];
+																			resultLegendArry[i][k++] = legendArry[i][j];
 																		}
 																		//获取年龄数据2
 																		i++;
@@ -102,49 +110,55 @@ query.count({
 																			success: function(count) {
 																				if (count > 0) {
 																					resultArry[i][k] = count;
-																					resultLegendArry[i][k++] = legendArry[i][j++];
+																					resultLegendArry[i][k++] = legendArry[i][j];
 																				}
+																				j++;
 																				query.equalTo(fields[i], (j - 1)); //2
 																				query.count({
 																					success: function(count) {
 																						if (count > 0) {
 																							resultArry[i][k] = count;
-																							resultLegendArry[i][k++] = legendArry[i][j++];
+																							resultLegendArry[i][k++] = legendArry[i][j];
 																						}
+																						j++;
 																						query.equalTo(fields[i], (j - 1)); //3
 																						query.count({
 																							success: function(count) {
 																								if (count > 0) {
 																									resultArry[i][k] = count;
-																									resultLegendArry[i][k++] = legendArry[i][j++];
+																									resultLegendArry[i][k++] = legendArry[i][j];
 																								}
+																								j++;
 																								query.equalTo(fields[i], (j - 1)); //4
 																								query.count({
 																									success: function(count) {
 																										if (count > 0) {
 																											resultArry[i][k] = count;
-																											resultLegendArry[i][k++] = legendArry[i][j++];
+																											resultLegendArry[i][k++] = legendArry[i][j];
 																										}
+																										j++;
 																										query.equalTo(fields[i], (j - 1)); //5
 																										query.count({
 																											success: function(count) {
 																												if (count > 0) {
 																													resultArry[i][k] = count;
-																													resultLegendArry[i][k++] = legendArry[i][j++];
+																													resultLegendArry[i][k++] = legendArry[i][j];
 																												}
+																												j++;
 																												query.equalTo(fields[i], (j - 1)); //6
 																												query.count({
 																													success: function(count) {
 																														if (count > 0) {
 																															resultArry[i][k] = count;
-																															resultLegendArry[i][k++] = legendArry[i][j++];
+																															resultLegendArry[i][k++] = legendArry[i][j];
 																														}
+																														j++;
 																														query.equalTo(fields[i], (j - 1)); //7
 																														query.count({
 																															success: function(count) {
 																																if (count > 0) {
 																																	resultArry[i][k] = count;
-																																	resultLegendArry[i][k++] = legendArry[i][j++];
+																																	resultLegendArry[i][k++] = legendArry[i][j];
 																																}
 																																//获取周围环境数据3
 																																i++;
@@ -158,35 +172,39 @@ query.count({
 																																	success: function(count) {
 																																		if (count > 0) {
 																																			resultArry[i][k] = count;
-																																			resultLegendArry[i][k++] = legendArry[i][j++];
+																																			resultLegendArry[i][k++] = legendArry[i][j];
 																																		}
+																																		j++;
 																																		query.equalTo(fields[i], (j - 1)); //2
 																																		query.count({
 																																			success: function(count) {
 																																				if (count > 0) {
 																																					resultArry[i][k] = count;
-																																					resultLegendArry[i][k++] = legendArry[i][j++];
+																																					resultLegendArry[i][k++] = legendArry[i][j];
 																																				}
+																																				j++;
 																																				query.equalTo(fields[i], (j - 1)); //3
 																																				query.count({
 																																					success: function(count) {
 																																						if (count > 0) {
 																																							resultArry[i][k] = count;
-																																							resultLegendArry[i][k++] = legendArry[i][j++];
+																																							resultLegendArry[i][k++] = legendArry[i][j];
 																																						}
+																																						j++;
 																																						query.equalTo(fields[i], (j - 1)); //4
 																																						query.count({
 																																							success: function(count) {
 																																								if (count > 0) {
 																																									resultArry[i][k] = count;
-																																									resultLegendArry[i][k++] = legendArry[i][j++];
+																																									resultLegendArry[i][k++] = legendArry[i][j];
 																																								}
+																																								j++;
 																																								query.equalTo(fields[i], (j - 1)); //5
 																																								query.count({
 																																									success: function(count) {
 																																										if (count > 0) {
 																																											resultArry[i][k] = count;
-																																											resultLegendArry[i][k++] = legendArry[i][j++];
+																																											resultLegendArry[i][k++] = legendArry[i][j];
 																																										}
 																																										//获取肤质数据4
 																																										i++;
@@ -200,49 +218,55 @@ query.count({
 																																											success: function(count) {
 																																												if (count > 0) {
 																																													resultArry[i][k] = count;
-																																													resultLegendArry[i][k++] = legendArry[i][j++];
+																																													resultLegendArry[i][k++] = legendArry[i][j];
 																																												}
+																																												j++;
 																																												query.equalTo(fields[i], (j - 1)); //2
 																																												query.count({
 																																													success: function(count) {
 																																														if (count > 0) {
 																																															resultArry[i][k] = count;
-																																															resultLegendArry[i][k++] = legendArry[i][j++];
+																																															resultLegendArry[i][k++] = legendArry[i][j];
 																																														}
+																																														j++;
 																																														query.equalTo(fields[i], (j - 1)); //3
 																																														query.count({
 																																															success: function(count) {
 																																																if (count > 0) {
 																																																	resultArry[i][k] = count;
-																																																	resultLegendArry[i][k++] = legendArry[i][j++];
+																																																	resultLegendArry[i][k++] = legendArry[i][j];
 																																																}
+																																																j++;
 																																																query.equalTo(fields[i], (j - 1)); //4
 																																																query.count({
 																																																	success: function(count) {
 																																																		if (count > 0) {
 																																																			resultArry[i][k] = count;
-																																																			resultLegendArry[i][k++] = legendArry[i][j++];
+																																																			resultLegendArry[i][k++] = legendArry[i][j];
 																																																		}
+																																																		j++;
 																																																		query.equalTo(fields[i], (j - 1)); //5
 																																																		query.count({
 																																																			success: function(count) {
 																																																				if (count > 0) {
 																																																					resultArry[i][k] = count;
-																																																					resultLegendArry[i][k++] = legendArry[i][j++];
+																																																					resultLegendArry[i][k++] = legendArry[i][j];
 																																																				}
+																																																				j++;
 																																																				query.equalTo(fields[i], (j - 1)); //6
 																																																				query.count({
 																																																					success: function(count) {
 																																																						if (count > 0) {
 																																																							resultArry[i][k] = count;
-																																																							resultLegendArry[i][k++] = legendArry[i][j++];
+																																																							resultLegendArry[i][k++] = legendArry[i][j];
 																																																						}
+																																																						j++;
 																																																						query.equalTo(fields[i], (j - 1)); //7
 																																																						query.count({
 																																																							success: function(count) {
 																																																								if (count > 0) {
 																																																									resultArry[i][k] = count;
-																																																									resultLegendArry[i][k++] = legendArry[i][j++];
+																																																									resultLegendArry[i][k++] = legendArry[i][j];
 																																																								}
 																																																								//获取肤色数据5
 																																																								i++;
@@ -256,35 +280,39 @@ query.count({
 																																																									success: function(count) {
 																																																										if (count > 0) {
 																																																											resultArry[i][k] = count;
-																																																											resultLegendArry[i][k++] = legendArry[i][j++];
+																																																											resultLegendArry[i][k++] = legendArry[i][j];
 																																																										}
+																																																										j++;
 																																																										query.equalTo(fields[i], (j - 1)); //2
 																																																										query.count({
 																																																											success: function(count) {
 																																																												if (count > 0) {
 																																																													resultArry[i][k] = count;
-																																																													resultLegendArry[i][k++] = legendArry[i][j++];
+																																																													resultLegendArry[i][k++] = legendArry[i][j];
 																																																												}
+																																																												j++;
 																																																												query.equalTo(fields[i], (j - 1)); //3
 																																																												query.count({
 																																																													success: function(count) {
 																																																														if (count > 0) {
 																																																															resultArry[i][k] = count;
-																																																															resultLegendArry[i][k++] = legendArry[i][j++];
+																																																															resultLegendArry[i][k++] = legendArry[i][j];
 																																																														}
+																																																														j++;
 																																																														query.equalTo(fields[i], (j - 1)); //4
 																																																														query.count({
 																																																															success: function(count) {
 																																																																if (count > 0) {
 																																																																	resultArry[i][k] = count;
-																																																																	resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																	resultLegendArry[i][k++] = legendArry[i][j];
 																																																																}
+																																																																j++;
 																																																																query.equalTo(fields[i], (j - 1)); //5
 																																																																query.count({
 																																																																	success: function(count) {
 																																																																		if (count > 0) {
 																																																																			resultArry[i][k] = count;
-																																																																			resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																			resultLegendArry[i][k++] = legendArry[i][j];
 																																																																		}
 																																																																		//获取脸型数据6
 																																																																		i++;
@@ -298,35 +326,39 @@ query.count({
 																																																																			success: function(count) {
 																																																																				if (count > 0) {
 																																																																					resultArry[i][k] = count;
-																																																																					resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																					resultLegendArry[i][k++] = legendArry[i][j];
 																																																																				}
+																																																																				j++;
 																																																																				query.equalTo(fields[i], (j - 1)); //2
 																																																																				query.count({
 																																																																					success: function(count) {
 																																																																						if (count > 0) {
 																																																																							resultArry[i][k] = count;
-																																																																							resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																							resultLegendArry[i][k++] = legendArry[i][j];
 																																																																						}
+																																																																						j++;
 																																																																						query.equalTo(fields[i], (j - 1)); //3
 																																																																						query.count({
 																																																																							success: function(count) {
 																																																																								if (count > 0) {
 																																																																									resultArry[i][k] = count;
-																																																																									resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																									resultLegendArry[i][k++] = legendArry[i][j];
 																																																																								}
+																																																																								j++;
 																																																																								query.equalTo(fields[i], (j - 1)); //4
 																																																																								query.count({
 																																																																									success: function(count) {
 																																																																										if (count > 0) {
 																																																																											resultArry[i][k] = count;
-																																																																											resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																											resultLegendArry[i][k++] = legendArry[i][j];
 																																																																										}
+																																																																										j++;
 																																																																										query.equalTo(fields[i], (j - 1)); //5
 																																																																										query.count({
 																																																																											success: function(count) {
 																																																																												if (count > 0) {
 																																																																													resultArry[i][k] = count;
-																																																																													resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																													resultLegendArry[i][k++] = legendArry[i][j];
 																																																																												}
 																																																																												//获取眉毛数据7
 																																																																												i++;
@@ -340,28 +372,31 @@ query.count({
 																																																																													success: function(count) {
 																																																																														if (count > 0) {
 																																																																															resultArry[i][k] = count;
-																																																																															resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																															resultLegendArry[i][k++] = legendArry[i][j];
 																																																																														}
+																																																																														j++;
 																																																																														query.equalTo(fields[i], (j - 1)); //2
 																																																																														query.count({
 																																																																															success: function(count) {
 																																																																																if (count > 0) {
 																																																																																	resultArry[i][k] = count;
-																																																																																	resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																	resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																}
+																																																																																j++;
 																																																																																query.equalTo(fields[i], (j - 1)); //3
 																																																																																query.count({
 																																																																																	success: function(count) {
 																																																																																		if (count > 0) {
 																																																																																			resultArry[i][k] = count;
-																																																																																			resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																			resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																		}
+																																																																																		j++;
 																																																																																		query.equalTo(fields[i], (j - 1)); //4
 																																																																																		query.count({
 																																																																																			success: function(count) {
 																																																																																				if (count > 0) {
 																																																																																					resultArry[i][k] = count;
-																																																																																					resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																					resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																				}
 																																																																																				//获取眼皮数据8
 																																																																																				i++;
@@ -375,28 +410,31 @@ query.count({
 																																																																																					success: function(count) {
 																																																																																						if (count > 0) {
 																																																																																							resultArry[i][k] = count;
-																																																																																							resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																							resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																						}
+																																																																																						j++;
 																																																																																						query.equalTo(fields[i], (j - 1)); //2
 																																																																																						query.count({
 																																																																																							success: function(count) {
 																																																																																								if (count > 0) {
 																																																																																									resultArry[i][k] = count;
-																																																																																									resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																									resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																								}
+																																																																																								j++;
 																																																																																								query.equalTo(fields[i], (j - 1)); //3
 																																																																																								query.count({
 																																																																																									success: function(count) {
 																																																																																										if (count > 0) {
 																																																																																											resultArry[i][k] = count;
-																																																																																											resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																											resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																										}
+																																																																																										j++;
 																																																																																										query.equalTo(fields[i], (j - 1)); //4
 																																																																																										query.count({
 																																																																																											success: function(count) {
 																																																																																												if (count > 0) {
 																																																																																													resultArry[i][k] = count;
-																																																																																													resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																													resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																												}
 																																																																																												//获取鼻子数据9
 																																																																																												i++;
@@ -410,21 +448,23 @@ query.count({
 																																																																																													success: function(count) {
 																																																																																														if (count > 0) {
 																																																																																															resultArry[i][k] = count;
-																																																																																															resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																															resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																														}
+																																																																																														j++;
 																																																																																														query.equalTo(fields[i], (j - 1)); //2
 																																																																																														query.count({
 																																																																																															success: function(count) {
 																																																																																																if (count > 0) {
 																																																																																																	resultArry[i][k] = count;
-																																																																																																	resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																	resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																}
+																																																																																																j++;
 																																																																																																query.equalTo(fields[i], (j - 1)); //3
 																																																																																																query.count({
 																																																																																																	success: function(count) {
 																																																																																																		if (count > 0) {
 																																																																																																			resultArry[i][k] = count;
-																																																																																																			resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																			resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																		}
 																																																																																																		//获取嘴唇数据10
 																																																																																																		i++;
@@ -438,21 +478,23 @@ query.count({
 																																																																																																			success: function(count) {
 																																																																																																				if (count > 0) {
 																																																																																																					resultArry[i][k] = count;
-																																																																																																					resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																					resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																				}
+																																																																																																				j++;
 																																																																																																				query.equalTo(fields[i], (j - 1)); //2
 																																																																																																				query.count({
 																																																																																																					success: function(count) {
 																																																																																																						if (count > 0) {
 																																																																																																							resultArry[i][k] = count;
-																																																																																																							resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																							resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																						}
+																																																																																																						j++;
 																																																																																																						query.equalTo(fields[i], (j - 1)); //3
 																																																																																																						query.count({
 																																																																																																							success: function(count) {
 																																																																																																								if (count > 0) {
 																																																																																																									resultArry[i][k] = count;
-																																																																																																									resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																									resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																								}
 																																																																																																								//获取头发颜色数据11
 																																																																																																								i++;
@@ -466,35 +508,39 @@ query.count({
 																																																																																																									success: function(count) {
 																																																																																																										if (count > 0) {
 																																																																																																											resultArry[i][k] = count;
-																																																																																																											resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																											resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																										}
+																																																																																																										j++;
 																																																																																																										query.equalTo(fields[i], (j - 1)); //2
 																																																																																																										query.count({
 																																																																																																											success: function(count) {
 																																																																																																												if (count > 0) {
 																																																																																																													resultArry[i][k] = count;
-																																																																																																													resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																													resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																												}
+																																																																																																												j++;
 																																																																																																												query.equalTo(fields[i], (j - 1)); //3
 																																																																																																												query.count({
 																																																																																																													success: function(count) {
 																																																																																																														if (count > 0) {
 																																																																																																															resultArry[i][k] = count;
-																																																																																																															resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																															resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																														}
+																																																																																																														j++;
 																																																																																																														query.equalTo(fields[i], (j - 1)); //4
 																																																																																																														query.count({
 																																																																																																															success: function(count) {
 																																																																																																																if (count > 0) {
 																																																																																																																	resultArry[i][k] = count;
-																																																																																																																	resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																																	resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																																}
+																																																																																																																j++;
 																																																																																																																query.equalTo(fields[i], (j - 1)); //5
 																																																																																																																query.count({
 																																																																																																																	success: function(count) {
 																																																																																																																		if (count > 0) {
 																																																																																																																			resultArry[i][k] = count;
-																																																																																																																			resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																																			resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																																		}
 																																																																																																																		//获取头发长度数据12
 																																																																																																																		i++;
@@ -508,28 +554,31 @@ query.count({
 																																																																																																																			success: function(count) {
 																																																																																																																				if (count > 0) {
 																																																																																																																					resultArry[i][k] = count;
-																																																																																																																					resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																																					resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																																				}
+																																																																																																																				j++;
 																																																																																																																				query.equalTo(fields[i], (j - 1)); //2
 																																																																																																																				query.count({
 																																																																																																																					success: function(count) {
 																																																																																																																						if (count > 0) {
 																																																																																																																							resultArry[i][k] = count;
-																																																																																																																							resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																																							resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																																						}
+																																																																																																																						j++;
 																																																																																																																						query.equalTo(fields[i], (j - 1)); //3
 																																																																																																																						query.count({
 																																																																																																																							success: function(count) {
 																																																																																																																								if (count > 0) {
 																																																																																																																									resultArry[i][k] = count;
-																																																																																																																									resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																																									resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																																								}
+																																																																																																																								j++;
 																																																																																																																								query.equalTo(fields[i], (j - 1)); //4
 																																																																																																																								query.count({
 																																																																																																																									success: function(count) {
 																																																																																																																										if (count > 0) {
 																																																																																																																											resultArry[i][k] = count;
-																																																																																																																											resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																																											resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																																										}
 																																																																																																																										//获取刘海数据13
 																																																																																																																										i++;
@@ -543,21 +592,23 @@ query.count({
 																																																																																																																											success: function(count) {
 																																																																																																																												if (count > 0) {
 																																																																																																																													resultArry[i][k] = count;
-																																																																																																																													resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																																													resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																																												}
+																																																																																																																												j++;
 																																																																																																																												query.equalTo(fields[i], (j - 1)); //2
 																																																																																																																												query.count({
 																																																																																																																													success: function(count) {
 																																																																																																																														if (count > 0) {
 																																																																																																																															resultArry[i][k] = count;
-																																																																																																																															resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																																															resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																																														}
+																																																																																																																														j++;
 																																																																																																																														query.equalTo(fields[i], (j - 1)); //3
 																																																																																																																														query.count({
 																																																																																																																															success: function(count) {
 																																																																																																																																if (count > 0) {
 																																																																																																																																	resultArry[i][k] = count;
-																																																																																																																																	resultLegendArry[i][k++] = legendArry[i][j++];
+																																																																																																																																	resultLegendArry[i][k++] = legendArry[i][j];
 																																																																																																																																}
 
 																																																																																																																																//获取省份数据
